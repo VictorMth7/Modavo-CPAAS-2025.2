@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Log</title>
+<link rel="stylesheet" href="Tela LOG/js/script.js">
+<link rel="stylesheet" href="Tela LOG/css/estilo.css">
+<!-- Define o ícone da página -->
+<link rel="icon" href="Login/img/logo icom.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="Tela LOG/img/logo_modavo.png" alt="foto do logo " width="200"><br><br>
+    </div>
+
+    <div class="tittle">
+        <h2>Tela de Log</h2>
+    </div>
+
+    <div id="filters">
+        <input type="text" id="searchInput" placeholder="Buscar por Nome, CPF ou Deixe em Branco Para Todos">
+        <button onclick="searchLog()">Buscar</button>
+    </div>
+    <div id="logSummary"></div>
+
+    <div class="logo">
+        <img src="Tela LOG/img/logoescura.png" alt="foto do logo" width="70"><br><br>
+    </div>
+</div>
+
+<script src="Tela LOG/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script>
+    $('#cep').mask('00000-000');
+    $('#dataNascimento').mask('00/00/0000');
+</script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+/* Importa a fonte Roboto Mono do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Define estilos básicos para o corpo da página */
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #f0f0f0;
+}
+
+/* Define a caixa de modelagem para todos os elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Define estilos para a seção principal de login */
+.main-login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6fd1fb 0%, #ffffff 100%);
+}
+
+/* Define estilos para a parte esquerda da tela de login */
+.left-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Define estilos para o título na parte esquerda da tela de login */
+.left-login>h1 {
+  font-size: 3vw;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Define estilos para a imagem na parte esquerda da tela de login */
+.img-login {
+  width: 35vw;
+  max-width: 400px;
+}
+
+/* Define estilos para a parte direita da tela de login */
+.right-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Define estilos para o cartão de login */
+.card-login {
+  width: 70%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 35px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(46, 46, 46, 0.8);
+}
+
+/* Define estilos para o título dentro do cartão de login */
+.card-login>h1 {
+  color: white;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+}
+
+/* Define estilos para o formulário */
+.card-login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Define estilos para os campos de texto */
+.textfiel {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 15px 0px;
+  position: relative;
+}
+
+/* Define estilos para os campos de entrada */
+.textfiel>input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(217, 217, 217);
+  font-size: 12pt;
+  box-shadow: 0px 5px 20px rgba(46, 46, 46, 0.3);
+  outline: none;
+  color: black;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Define estilos para as etiquetas dos campos de texto */
+.textfiel>label {
+  color: white;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Define estilos para o texto de espaço reservado nos campos de entrada */
+.textfiel>input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Define estilos para o botão de login */
+.btn-login {
+  width: 80%;
+  padding: 16px 0px;
+  margin: 25px 0 15px 0;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #0a0a0a;
+  background-color: #6fd1fb;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px rgba(46, 46, 46, 0.5);
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover para o botão de login */
+.btn-login:hover {
+  background-color: #4fc3f7;
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 45px -10px rgba(46, 46, 46, 0.6);
+}
+
+/* Define estilos para o botão de mostrar/ocultar senha */
+.textfiel button {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover para o botão de mostrar senha */
+.textfiel button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Ajusta o padding do campo senha para o botão */
+#senha {
+  padding-right: 50px;
+}
+
+/* Define estilos para os links */
+.cadastre-se {
+  text-decoration: none;
+  color: #6fd1fb;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cadastre-se:hover {
+  color: #4fc3f7;
+  text-decoration: underline;
+}
+
+.Esqueci {
+  text-decoration: none;
+  color: #6fd1fb;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.Esqueci:hover {
+  color: #4fc3f7;
+  text-decoration: underline;
+}
+
+/* Define o estilo do ID mensagensErro */
+#mensagensErro {
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+  width: 80%;
+  font-weight: bold;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Define estilos responsivos para telas menores */
+@media only screen and (max-width: 950px) {
+  .card-login {
+    width: 85%;
+    padding: 30px 25px;
+  }
+  
+  .left-login>h1 {
+    font-size: 2.5vw;
+  }
+}
+
+/* Define estilos responsivos para telas ainda menores */
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .left-login>h1 {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .left-login {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .right-login {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .img-login {
+    width: 70vw;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .card-login {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .textfiel {
+    width: 90%;
+  }
+
+  .btn-login {
+    width: 90%;
+  }
+  
+  .card-login>h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Estilos para inputs com foco */
+.textfiel>input:focus {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(111, 209, 251, 0.4);
+  border: 2px solid #6fd1fb;
+}
+
+/* Estilos para o ícone do botão de senha */
+.textfiel button i {
+  font-size: 1.2rem;
+}

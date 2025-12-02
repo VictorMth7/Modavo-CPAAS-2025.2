@@ -1,0 +1,56 @@
+/* Importa a fonte Roboto Mono do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Define estilos básicos para o corpo da página */
+body {
+  font-family: "roboto mono", sans-serif;
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Aplica um plano de fundo cinza claro e centraliza o texto em todos os elementos */
+* {
+    background-color: #8de3f9;
+    text-align: center;
+}
+
+/* Define o estilo para todos os elementos <input> */
+input {
+    border: solid black;
+    background-color: white;
+}
+
+/* Estilos para o topo */
+.topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.img img {
+    width: 200px; /* Ajuste conforme necessário */
+}
+
+/* Define o estilo para o elemento com o id "botão" */
+#botão {
+    font-weight: bold;
+    border: solid black;
+}
+
+/* Define o estilo para o elemento com o id "texto2" */
+#texto2 {
+    font-weight: bold;
+    color: black;
+}
+
+.texto1 {
+    text-align: center;
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}

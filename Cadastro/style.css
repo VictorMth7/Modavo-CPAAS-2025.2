@@ -1,0 +1,499 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal dividido */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 700px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Lado esquerdo - Formulário */
+.form-side {
+    padding: 40px;
+    background: white;
+    overflow-y: auto;
+    max-height: 700px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* Lado direito - Conteúdo promocional */
+.promo-side {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.promo-content {
+    max-width: 400px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 300px;
+    filter: brightness(0) invert(1);
+}
+
+.promo-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.promo-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.character {
+    margin: 30px 0;
+}
+
+.character img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Botões do lado promocional */
+.promo-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    align-items: stretch;
+    /* Faz os botões terem a mesma largura */
+    justify-content: center;
+    /* Centraliza verticalmente se necessário */
+}
+
+/* Se quiser que os botões tenham largura total do container */
+.promo-buttons .btn-login,
+.promo-buttons .btn-google {
+    width: 100%;
+}
+
+.btn-login {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-login:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-google {
+    background: white;
+    color: #4285f4;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-google:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do formulário */
+#cadastroForm {
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    height: 46px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2575fc;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.1);
+}
+
+/* Campos que ocupam duas colunas */
+.form-group:nth-child(1),
+/* Nome Completo */
+.form-group:nth-child(4),
+/* Nome Materno */
+.form-group:nth-child(5),
+/* CPF */
+.form-group:nth-child(6),
+/* Email */
+.form-group:nth-child(9),
+/* CEP */
+.form-group:nth-child(10),
+/* Rua */
+.form-group:nth-child(13),
+/* Complemento */
+.form-group:nth-child(16),
+/* Login */
+.form-group:nth-child(17),
+/* Senha */
+.form-group:nth-child(18)
+
+/* Confirmar Senha */
+    {
+    grid-column: 1 / -1;
+}
+
+/* Campos lado a lado */
+.form-group:nth-child(2),
+/* Data Nascimento */
+.form-group:nth-child(3)
+
+/* Sexo */
+    {
+    grid-column: span 1;
+}
+
+.form-group:nth-child(7),
+/* Celular */
+.form-group:nth-child(8)
+
+/* Telefone Fixo */
+    {
+    grid-column: span 1;
+}
+
+.form-group:nth-child(11),
+/* Número */
+.form-group:nth-child(12)
+
+/* Bairro */
+    {
+    grid-column: span 1;
+}
+
+.form-group:nth-child(14),
+/* Cidade */
+.form-group:nth-child(15)
+
+/* Estado */
+    {
+    grid-column: span 1;
+}
+
+/* Campos de senha */
+.input-group {
+    position: relative;
+}
+
+.input-group-append {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f0f0f0;
+    color: #495057;
+}
+
+/* Botões do formulário */
+/* Versão Simples */
+.btn-group {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-primary {
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 180px;
+}
+
+/* Botão Concluir - Verde */
+.btn-group .btn-primary:first-child {
+    background: #27ae60;
+}
+
+.btn-group .btn-primary:first-child:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+/* Botão Limpar - Cinza */
+.btn-group .btn-primary:last-child {
+    background: #95a5a6;
+}
+
+.btn-group .btn-primary:last-child:hover {
+    background: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+}
+
+.btn-clear {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #6c757d;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-clear:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 16px;
+    line-height: 1.2;
+}
+
+/* Placeholder e selects */
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+    font-size: 0.9rem;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .promo-side {
+        display: none;
+    }
+
+    .form-side {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .main-container {
+        min-height: auto;
+    }
+
+    .form-side {
+        padding: 25px;
+    }
+
+    #cadastroForm {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-group {
+        grid-column: 1 / -1 !important;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-clear {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-side {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        height: 44px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-container {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.promo-side {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Estados de validação */
+.form-group input:valid {
+    border-color: #2ecc71;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
